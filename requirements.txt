@@ -1,0 +1,16 @@
+pandas 
+numpy
+google-cloud-storage
+scikit-learn
+pyyaml
+imbalanced-learn
+lightgbm
+mlflow
+flask
+matplotlib
+seaborn
+statsmodels #multicolinearity
+openpyxl
+lightgbm
+xgboost==1.7.6
+imbalanced-learn

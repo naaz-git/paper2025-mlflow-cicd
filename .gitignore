@@ -1,0 +1,7 @@
+artifacts/
+mlruns/
+logs/
+MLOPS_PROJECT_1.egg-info/
+READMEInstall.txt
+__pycache__/
+*.pkl

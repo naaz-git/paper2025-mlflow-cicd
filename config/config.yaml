@@ -1,0 +1,27 @@
+data_ingestion:
+  bucket_name : "my_bucket_mar12"
+  bucket_file_name : "icad2025.xlsx"
+  train_ratio : 0.8
+
+data_processing:
+  categorical_columns:
+    - apptday
+    - appttype
+    - race
+    - ethnicity
+    - patient.lang
+    - homelessstatus
+    - patient.marital.status
+    - patientsex
+    - pblchouspat
+    - vetstatus
+    - ptnt.cnsnt.t.cll.ysn
+    - ptnt.cnsnt.t.txt.ysn
+  numerical_columns:
+    - scheduled.slots
+    - cancelled.slots
+    - patient.age
+    - patient.noshow
+    
+  skewness_threshold : 5
+  no_of_features : 10
