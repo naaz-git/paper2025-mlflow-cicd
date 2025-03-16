@@ -24,8 +24,8 @@ class DataIngestion:
 
     def download_csv_from_gcp(self):
         try:
-            os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/Users/naaz/data1/official/myfunprojects/MLops/myMLflowPrj/mlflowEnv/env/poetic-sentinel-448201-n2-31456dcc94c7.json"
             print(RAW_FILE_PATH)
+            #os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/Users/naaz/data1/official/myfunprojects/MLops/myMLflowPrj/mlflowEnv/env/poetic-sentinel-448201-n2-31456dcc94c7.json"
             client = storage.Client()
     
             bucket = client.bucket(self.bucket_name)
