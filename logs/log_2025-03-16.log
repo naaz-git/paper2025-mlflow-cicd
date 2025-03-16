@@ -1,0 +1,6 @@
+2025-03-16 14:06:46,783 - INFO - Succesfully read the YAML file
+2025-03-16 14:06:46,783 - INFO - Data Ingestion started logging
+2025-03-16 14:06:46,783 - INFO - Data Ingestion started with my_bucket_mar12 and file is  icad2025.xlsx
+2025-03-16 14:06:46,783 - INFO - Starting data ingestion process
+2025-03-16 14:06:49,798 - WARNING - Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+2025-03-16 14:06:50,368 - INFO - Data ingestion completed
