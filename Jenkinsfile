@@ -71,8 +71,8 @@ pipeline{
 
                         gcloud config set project ${GCP_PROJECT}
 
-                        gcloud run deploy ml-project \
-                            --image=gcr.io/${GCP_PROJECT}/ml-project:latest \
+                        gcloud run deploy ml-projectimage \
+                            --image=gcr.io/${GCP_PROJECT}/ml-projectimage:latest \
                             --platform=managed \
                             --region=us-central1 \
                             --allow-unauthenticated
