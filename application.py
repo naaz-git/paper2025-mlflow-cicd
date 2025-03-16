@@ -2,7 +2,7 @@ import joblib
 import numpy as np
 from config.paths_config import MODEL_OUTPUT_PATH
 from flask import Flask, render_template,request
-
+import os
 app = Flask(__name__)
 
 loaded_model = joblib.load(MODEL_OUTPUT_PATH)
