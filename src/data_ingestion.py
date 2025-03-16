@@ -10,6 +10,9 @@ logger = get_logger(__name__)
 
 class DataIngestion:
     def __init__(self,config):
+        logger.info(f"Data Ingestion started}")
+        print(f"Data Ingestion started print")
+
         self.config = config["data_ingestion"]
         self.bucket_name = self.config["bucket_name"]
         self.file_name = self.config["bucket_file_name"]
