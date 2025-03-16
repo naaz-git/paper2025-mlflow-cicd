@@ -57,6 +57,17 @@ pipeline{
             }
         }
 
+        ## 🐳 New Stage - Run Docker Image Locally on Different Port (9090)
+        stage('Run Docker Container Locally'){
+            steps{
+                script{
+                    echo 'Running Docker Container Locally............'
+                    sh '''
+                    docker run -d -p 9090:8080 gcr.io/${GCP_PROJECT}/ml-projectimage:latest
+                    '''
+                }
+            }
+        }
 
         stage('Deploy to Google Cloud Run'){
             steps{
