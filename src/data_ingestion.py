@@ -36,6 +36,7 @@ class DataIngestion:
 
             blob.download_to_filename(RAW_FILE_PATH)
             logger.info(f"{RAW_FILE_PATH=}")
+            print(f"CSV file is sucesfully downloaded to {RAW_FILE_PATH}")
 
             logger.info(f"CSV file is sucesfully downloaded to {RAW_FILE_PATH}")
 
