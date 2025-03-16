@@ -19,12 +19,13 @@ class DataIngestion:
         self.train_test_ratio = self.config["train_ratio"]
 
         os.makedirs(RAW_DIR , exist_ok=True)
+        print(f"Data Ingestion started with {self.bucket_name} and file is  {self.file_name}")
 
         logger.info(f"Data Ingestion started with {self.bucket_name} and file is  {self.file_name}")
 
     def download_csv_from_gcp(self):
         try:
-            print(RAW_FILE_PATH)
+            print('download_csv_from_gcp', RAW_FILE_PATH)
             #os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/Users/naaz/data1/official/myfunprojects/MLops/myMLflowPrj/mlflowEnv/env/poetic-sentinel-448201-n2-31456dcc94c7.json"
             client = storage.Client()
     
