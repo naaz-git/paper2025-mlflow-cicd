@@ -10,25 +10,26 @@ loaded_model = joblib.load(MODEL_OUTPUT_PATH)
 @app.route('/',methods=['GET','POST'])
 def index():
     if request.method=='POST':
+        patient_age = int(request.form["patient_age"])
 
-        lead_time = int(request.form["lead_time"])
-        no_of_special_request = int(request.form["no_of_special_request"])
-        avg_price_per_room = float(request.form["avg_price_per_room"])
-        arrival_month = int(request.form["arrival_month"])
-        arrival_date = int(request.form["arrival_date"])
+        cancelled_slots = int(request.form["cancelled_slots"])
+        scheduled_slots = int(request.form["scheduled_slots"])
 
-        market_segment_type = int(request.form["market_segment_type"])
-        no_of_week_nights = int(request.form["no_of_week_nights"])
-        no_of_weekend_nights = int(request.form["no_of_weekend_nights"])
+        appt_type = int(request.form["appt_type"])
+        appt_day = int(request.form["appt_day"])
+        race = int(request.form["race"])
+        ethnicity = int(request.form["ethnicity"])
+        marital_status = int(request.form["marital_status"])
+        patient_lang = int(request.form["patient_lang"])
+        pblchouspat = int(request.form["pblchouspat"])
 
-        type_of_meal_plan = int(request.form["type_of_meal_plan"])
-        room_type_reserved = int(request.form["room_type_reserved"])
+        # Prepare the feature array for prediction
+        features = np.array([[cancelled_slots, patient_age, appt_type, appt_day, race, scheduled_slots, ethnicity, marital_status, patient_lang, pblchouspat]])
+        #features = np.array([[0,2,2,2,5,1,1,4,1,0]])
+        print(f"{features=}")
 
-
-        features = np.array([[lead_time,no_of_special_request,avg_price_per_room,arrival_month,arrival_date,market_segment_type,no_of_week_nights,no_of_weekend_nights,type_of_meal_plan,room_type_reserved]])
-
+        # Get the prediction
         prediction = loaded_model.predict(features)
-
         return render_template('index.html', prediction=prediction[0])
     
     return render_template("index.html" , prediction=None)
