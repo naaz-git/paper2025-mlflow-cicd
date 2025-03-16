@@ -10,7 +10,7 @@ logger = get_logger(__name__)
 
 class DataIngestion:
     def __init__(self,config):
-        logger.info(f"Data Ingestion started}")
+        logger.info(f"Data Ingestion started logging")
         print(f"Data Ingestion started print")
 
         self.config = config["data_ingestion"]
