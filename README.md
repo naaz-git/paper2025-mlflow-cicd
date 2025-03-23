@@ -1,2 +1,2 @@
-# kubernetesCI-CD
-end-2-end ML model on GCP cloud, Data ingesiton, Preprocessingm, Model training, experimentation tracking on ML flow, Kubernetes and CI/CD integration
+# MLflow CI-CD
+end-2-end ML model hosting on GCP cloud, Data ingestion, Preprocessing, Model training, experimentation tracking on ML flow, and CI/CD integration using jenkins docker container
